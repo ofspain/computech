@@ -1,0 +1,88 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Furniture Hub Nigeria
+title_separator: "|"
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  All your household and daily needs ranging from furniture, electronics, wares, etc here at
+  your finger tips
+baseurl: "/furniture-hub" # the subpath of your site, e.g. /blog will be name of repository on github if i want to host it inside ofspain, else, if i want to host it on separate github account, i leave it blank
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+logo: "/assets/images/logo.png"
+minimal_mistakes_skin: "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+# Build settings
+markdown: kramdown
+#theme: minima
+theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.20.1"
+repository: ofspain/ofspain.github.io
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+collections:
+  livingroom:
+    output: true
+    permalink: /:collection/:title/
+  dinning:
+    output: true
+    permalink: /:collection/:title/
+  posts:
+    output: true
+    permanlink: /blog/:title
+
+defaults:
+  # _livingroom
+  - scope:
+      path: ""
+      type: livingroom
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _dinning
+  - scope:
+      path: ""
+      type: dinning
+    values:
+      layout: single
+      author_profile: false
+      share: true  
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

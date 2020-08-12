@@ -1,0 +1,12 @@
+# main links
+main:
+   - title: "Livingroom"
+     url: /living-room/
+   - title: "Dinning"
+     url: /dinning/
+   - title: "Bedroom"
+     url: /bedroom/
+   - title: "Kitchen"
+     url: /kitchen/
+   - title: "Archives"
+     url: /archive/
