@@ -14,13 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Furniture Hub Nigeria
+title: Computech Nigeria
 title_separator: "|"
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  All your household and daily needs ranging from furniture, electronics, wares, etc here at
-  your finger tips
-baseurl: "/furniture-hub" # the subpath of your site, e.g. /blog will be name of repository on github if i want to host it inside ofspain, else, if i want to host it on separate github account, i leave it blank
+  Get abreast with state-of-the-art information communication technology at the least possible cost
+baseurl: "/computech" # the subpath of your site, e.g. /blog will be name of repository on github if i want to host it inside ofspain, else, if i want to host it on separate github account, i leave it blank
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -38,10 +37,10 @@ plugins:
   - jekyll-include-cache
 
 collections:
-  livingroom:
+  trainning:
     output: true
     permalink: /:collection/:title/
-  dinning:
+  research:
     output: true
     permalink: /:collection/:title/
   posts:
@@ -49,18 +48,10 @@ collections:
     permanlink: /blog/:title
 
 defaults:
-  # _livingroom
+  # _trainning
   - scope:
       path: ""
-      type: livingroom
-    values:
-      layout: single
-      author_profile: false
-      share: true
-  # _dinning
-  - scope:
-      path: ""
-      type: dinning
+      type: trainning
     values:
       layout: single
       author_profile: false
